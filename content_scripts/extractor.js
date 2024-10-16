@@ -158,7 +158,7 @@ async function extractSunRunData() {
 async function extractData() {
     console.log('Current URL:', window.location.href);  // Add this line for debugging
     if (window.location.hostname === "crm.na1.insightly.com" && 
-        window.location.pathname.includes("/details/project/")) {
+        window.location.pathname.toLocaleLowerCase().includes("/details/project/")) {
         return extractInsightlyData();
     } else if (window.location.hostname === "sunrun.my.site.com" &&
                window.location.pathname.includes("/partner/")) {
